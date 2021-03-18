@@ -7,7 +7,7 @@ function LED1_On() {
     console.log("led on");
     document.getElementById("sensor").innerHTML="led on";
     message = new Paho.MQTT.Message("ON");
-    message.destinationName = "bryan.loaiza@unach.edu.ec/tema2";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
   
 }
@@ -16,7 +16,7 @@ function LED1_Off(){
     console.log("led off");
     //document.getElementById("sensor").innerHTML="led off";
     message = new Paho.MQTT.Message("OFF");
-    message.destinationName = "bryan.loaiza@unach.edu.ec/tema2";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
 }
 
@@ -36,8 +36,8 @@ Create a client instance
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "bryan.loaiza@unach.edu.ec",
-    password: "123",
+    userName: "kevinguadalupe15@gmail.com",
+    password: "kevin2000",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -52,9 +52,9 @@ Create a client instance
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
     
-    client.subscribe("bryan.loaiza@unach.edu.ec/tema1");
+    client.subscribe("kevinguadalupe15@gmail.com/tema1");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "bryan.loaiza@unach.edu.ec/tema2";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
     
   }
