@@ -17,8 +17,8 @@ function LED1_Off(){
 
 
 
-// Create a client instance
-  //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
+Create a client instance
+client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
@@ -47,21 +47,21 @@ function LED1_Off(){
     client.send(message);
 	
   }
-
-  function doFail(e){
-    console.log(e);
+//
+ // function doFail(e){
+  //  console.log(e);
 	
   }
 
   // called when the client loses its connection
-  function onConnectionLost(responseObject) {
-    if (responseObject.errorCode !== 0) {
-      console.log("onConnectionLost:"+responseObject.errorMessage);
+ // function onConnectionLost(responseObject) {
+  //  if (responseObject.errorCode !== 0) {
+ //     console.log("onConnectionLost:"+responseObject.errorMessage);
     }
   }
 
   // called when a message arrives
-  function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
+ // function onMessageArrived(message) {
+  //  console.log("onMessageArrived:"+message.payloadString);
   }
-  
+  //
