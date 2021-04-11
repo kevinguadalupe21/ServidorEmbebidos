@@ -49,7 +49,7 @@ function senso2(){
 	
     client.subscribe("kevinguadalupe15@gmail.com/tema2");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
 	
   }
