@@ -1,6 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function sensor1() {
+function senso1() {
 	alert("led on"); // para comentar
 	//console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
@@ -10,7 +10,7 @@ function sensor1() {
 
 }
 
-function senso2r(){	
+function senso2(){	
 	alert("led off");
 	//console.log("led off");
 	//document.getElementById("sensor").innerHTML="led off";
