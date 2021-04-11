@@ -48,8 +48,8 @@ function senso2(){
     console.log("Conectado...");
 	
     client.subscribe("kevinguadalupe15@gmail.com/tema2");
-    message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+    message = new Paho.MQTT.Message("ESTADO_SENSOR");
+    message.destinationName = "kevinguadalupe15@gmail.com/tema3";
     client.send(message);
 	
   }
