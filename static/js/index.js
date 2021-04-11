@@ -2,10 +2,10 @@
 
 function senso1() {
 	alert("led on"); // para comentar
-	console.log("led on");
+	//console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
   	message = new Paho.MQTT.Message("sensor1");
-   	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+   	message.destinationName = "kevinguadalupe15@gmail.com/tema1";
    	client.send(message);
 
 }
@@ -14,7 +14,7 @@ function senso2(){
 	alert("led off");
 	//console.log("led off");
 	//document.getElementById("sensor").innerHTML="led off";
-	message = new Paho.MQTT.Message("OFF");
+	message = new Paho.MQTT.Message("sensor2");
     	message.destinationName = "kevinguadalupe15@gmail.com/tema3";
     	client.send(message);
 }
@@ -49,7 +49,7 @@ function senso2(){
 	
     client.subscribe("kevinguadalupe15@gmail.com/tema2");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
     client.send(message);
 	
   }
