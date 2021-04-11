@@ -1,21 +1,21 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function senso1() {
+function sensor1() {
 	alert("led on"); // para comentar
 	//console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
   	message = new Paho.MQTT.Message("sensor1");
-   	message.destinationName = "kevinguadalupe15@gmail.com/tema1";
+   	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
    	client.send(message);
 
 }
 
-function senso2(){	
+function senso2r(){	
 	alert("led off");
 	//console.log("led off");
 	//document.getElementById("sensor").innerHTML="led off";
 	message = new Paho.MQTT.Message("sensor2");
-    	message.destinationName = "kevinguadalupe15@gmail.com/tema3";
+    	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     	client.send(message);
 }
 
@@ -49,7 +49,7 @@ function senso2(){
 	
     client.subscribe("kevinguadalupe15@gmail.com/tema2");
     message = new Paho.MQTT.Message("ESTADO_SENSOR");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
 	
   }
