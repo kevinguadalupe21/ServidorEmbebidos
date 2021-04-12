@@ -3,16 +3,16 @@
  
 
 function senso1() {
-    //alert("led on");/
+    alert("led on");/
     //console.log("led on");
     //document.getElementById("sensor").innerHTML="led on";
     message = new Paho.MQTT.Message("ON");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
   
 }
 function senso2(){    
-   // alert("led off");
+   alert("led off");
    // console.log("led off");
     //document.getElementById("sensor").innerHTML="led off";
     message = new Paho.MQTT.Message("OFF");
