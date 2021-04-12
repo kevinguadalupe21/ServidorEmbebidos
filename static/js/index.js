@@ -46,7 +46,7 @@ function senso2(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("kevinguadalupe15@gmail.com/tema2");
+    client.subscribe("kevinguadalupe15@gmail.com/tema1");
     message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
