@@ -5,7 +5,7 @@ function senso1() {
 	//console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
   	message = new Paho.MQTT.Message("ON");
-   	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+   	message.destinationName = "kevinguadalupe15@gmail.com/tema1";
     	client.send(message);
 }
 function senso2(){	
@@ -13,7 +13,7 @@ function senso2(){
 	//console.log("led off");
 	//document.getElementById("sensor").innerHTML="led off";
 	message = new Paho.MQTT.Message("OFF");
-    	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+    	message.destinationName = "kevinguadalupe15@gmail.com/tema1";
     	client.send(message);
 }
 
