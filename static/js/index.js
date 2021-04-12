@@ -2,7 +2,7 @@
 
  
 
-function LED1_On() {
+function senso1() {
     alert("led on");
     //console.log("led on");
     //document.getElementById("sensor").innerHTML="led on";
@@ -12,7 +12,7 @@ function LED1_On() {
   
 }
 
-function LED1_Off(){    
+function senso2(){    
     alert("led off");
     //console.log("led off");
     //document.getElementById("sensor").innerHTML="led off";
