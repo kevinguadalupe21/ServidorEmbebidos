@@ -1,20 +1,15 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function senso1() {
+function LED1_On() {
 	alert("led on");
-	//console.log("led on");
-	//document.getElementById("sensor").innerHTML="led on";
-  	message = new Paho.MQTT.Message("sensor1");
-   	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
-    	client.send(message);
+	console.log("led on");
+	document.getElementById("sensor").innerHTML="led on";
+  
 }
-function senso2(){	
+function LED1_Off(){	
 	alert("led off");
-	//console.log("led off");
-	//document.getElementById("sensor").innerHTML="led off";
-	message = new Paho.MQTT.Message("sensor2");
-    	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
-    	client.send(message);
+	console.log("led off");
+	document.getElementById("sensor").innerHTML="led off";
 }
 
 
@@ -32,8 +27,8 @@ function senso2(){
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "kevinguadalupe15@gmail.com",
-    password: "kevin2000",
+    userName: "lfrenteriax@hotmail.com",
+    password: "lfrenteriax",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -46,9 +41,9 @@ function senso2(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("kevinguadalupe15@gmail.com/tema2");
+    client.subscribe("lfrenteriax@hotmail.com/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+    message.destinationName = "lfrenteriax@hotmail.com/test1";
     client.send(message);
 	
   }
@@ -68,5 +63,5 @@ function senso2(){
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	  document.getElementById("sensor").innerHTML=message.payloadString;
   }
+  
