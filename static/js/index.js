@@ -2,25 +2,24 @@
 
  
 
-function LED1_On() {
-    /alert("led on");/
-    console.log("led on");
+function senso1() {
+    //alert("led on");/
+    //console.log("led on");
     //document.getElementById("sensor").innerHTML="led on";
     message = new Paho.MQTT.Message("ON");
     message.destinationName = "kevinguadalupe15@gmail.com/tema1";
     client.send(message);
   
 }
-/*
-function LED1_Off(){    
-    alert("led off");
-    console.log("led off");
+function senso2(){    
+   // alert("led off");
+   // console.log("led off");
     //document.getElementById("sensor").innerHTML="led off";
     message = new Paho.MQTT.Message("OFF");
     message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
   
-}*/
+}
 
  
 
