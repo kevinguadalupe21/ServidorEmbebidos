@@ -7,7 +7,7 @@ function LED1_On() {
     //console.log("led on");
     //document.getElementById("sensor").innerHTML="led on";
     message = new Paho.MQTT.Message("ON");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
   
 }
