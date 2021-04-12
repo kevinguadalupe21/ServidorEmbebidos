@@ -7,7 +7,7 @@ function senso1() {
     //console.log("led on");
     //document.getElementById("sensor").innerHTML="led on";
     message = new Paho.MQTT.Message("ACTIVADO");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
     client.send(message);
   
 }
@@ -16,7 +16,7 @@ function senso2(){
    // console.log("led off");
     //document.getElementById("sensor").innerHTML="led off";
     message = new Paho.MQTT.Message("DESACTIVADO");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
     client.send(message);
   
 }
@@ -53,9 +53,9 @@ function senso2(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
     
-    client.subscribe("kevinguadalupe15@gmail.com/tema2");
+    client.subscribe("kevinguadalupe15@gmail.com/tema1");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "kevinguadalupe15@gmail.com/tema1";
+    message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     client.send(message);
     
   }
