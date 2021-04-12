@@ -3,7 +3,7 @@
  
 
 function senso1() {
-    alert("led on");/
+    alert("led on");
     //console.log("led on");
     //document.getElementById("sensor").innerHTML="led on";
     message = new Paho.MQTT.Message("ON");
