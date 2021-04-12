@@ -1,6 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function LED1_On() {
+function senso1() {
 	alert("led on");
 	//console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
@@ -8,9 +8,9 @@ function LED1_On() {
    	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
     	client.send(message);
 }
-function LED1_Off(){	
+function senso2(){	
 	alert("led off");
-	console.log("led off");
+	//console.log("led off");
 	//document.getElementById("sensor").innerHTML="led off";
 	message = new Paho.MQTT.Message("OFF");
     	message.destinationName = "kevinguadalupe15@gmail.com/tema2";
